@@ -1,26 +1,19 @@
-// App.js
 import React from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import { AuthProvider } from './components/AuthContext';
-import LoginPage from './components/LogIn';
-import HomePage from './components/Home';
-import OverviewPage from './components/overview'; //posuble error
-import ContactPage from './components/Contact';
-import PrivateRoute from './components/PrivateRoute';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { AuthProvider } from './AuthContext';
+import { LoginPage, HomePage, OverviewPage, ContactPage } from './Pages';
 
-function App() {
+const App = () => {
   return (
     <AuthProvider>
-      <Router>
-        <Switch>
-          <Route path="/login" component={LoginPage} />
-          <PrivateRoute exact path="/" component={HomePage} />
-          <PrivateRoute path="/overview" component={OverviewPage} />
-          <PrivateRoute path="/contact" component={ContactPage} />
-        </Switch>
-      </Router>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<LoginPage />} />
+          <Route path="/home" element={<HomePage />} />
+          <Route path="/overview" element={<OverviewPage />} />
+          <Route path="/contact" element={<ContactPage />} />
+        </Routes>
+      </BrowserRouter>
     </AuthProvider>
   );
-}
-
-export default App;
+};
