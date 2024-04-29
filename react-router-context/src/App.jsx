@@ -1,7 +1,10 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { AuthProvider } from './AuthContext';
-import { LoginPage, HomePage, OverviewPage, ContactPage } from './Pages';
+import LoginPage from './pages/LoginPage'; // Import default export
+import HomePage from './pages/HomePage'; // Import default export
+import OverviewPage from './pages/OverviewPage'; // Import default export
+import ContactPage from './pages/ContactPage'; // Import default export
 
 const App = () => {
   return (
@@ -17,3 +20,5 @@ const App = () => {
     </AuthProvider>
   );
 };
+
+export default App;
