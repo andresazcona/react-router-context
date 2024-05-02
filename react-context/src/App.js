@@ -1,6 +1,6 @@
 // App.js
 import React, { useState } from 'react';
-import { BrowserRouter as Router, Route, Redirect, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
 import { AuthContext } from './context/AuthContext';
 import LoginPage from './pages/LoginPage';
 import HomePage from './pages/HomePage';
@@ -26,30 +26,24 @@ const App = () => {
   return (
     <Router>
       <AuthContext.Provider value={{ isLoggedIn, login, logout }}>
-        <Switch>
-          <Route path="/login" component={LoginPage} />
-          <PrivateRoute path="/home" component={HomePage} />
-          <PrivateRoute path="/overview" component={OverviewPage} />
-          <PrivateRoute path="/contact" component={ContactPage} />
-          <Redirect to="/login" />
-        </Switch>
+        <Routes>
+          <Route path="/login" element={<LoginPage />} />
+          <PrivateRoute path="/home" element={<HomePage />} />
+          <PrivateRoute path="/overview" element={<OverviewPage />} />
+          <PrivateRoute path="/contact" element={<ContactPage />} />
+          <Route path="*" element={<Navigate to="/login" />} />
+        </Routes>
       </AuthContext.Provider>
     </Router>
   );
 };
 
-const PrivateRoute = ({ component: Component, ...rest }) => {
+const PrivateRoute = ({ element: Element, ...rest }) => {
   const { isLoggedIn } = React.useContext(AuthContext);
   return (
     <Route
       {...rest}
-      render={(props) =>
-        isLoggedIn ? (
-          <Component {...props} />
-        ) : (
-          <Redirect to="/login" />
-        )
-      }
+      element={isLoggedIn ? <Element /> : <Navigate to="/login" />}
     />
   );
 };
