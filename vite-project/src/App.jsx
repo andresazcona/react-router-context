@@ -43,6 +43,7 @@ const PrivateRoute = ({ element }) => {
 const Home = () => (
   <>
     <h2>WELCOME TO HOME</h2>
+    <p>Este proyecto fue hecho con amor y cariño, y alimentado por mis lágrimas y mi insomnio - por Andres Azcona</p>
   </>
 );
 
@@ -50,6 +51,13 @@ const Home = () => (
 const Overview = () => (
   <>
     <h2>WELCOME TO OVERVIEW</h2>
+<p>Querido yo,</p>
+<p>Quiero agradecerme sinceramente por el esfuerzo y dedicación que he demostrado en este proyecto. 
+Ha sido una experiencia enriquecedora donde he aprendido mucho, tanto técnica como personalmente. 
+Estoy agradecido por haber tenido la oportunidad de colaborar conmigo mismo y estoy emocionado 
+por lo que vendrá en el futuro.</p>
+<p>Gracias,<br />Andres Azcona</p>
+
   </>
 );
 
@@ -57,6 +65,9 @@ const Overview = () => (
 const Contact = () => (
   <>
     <h2>WELCOME TO CONTACT</h2>
+    <p>Andres Azcona</p>
+    <p>Contacto: <a href="mailto:andresazgo@unisabana.edu.co">andresazgo@unisabana.edu.co</a></p>
+
   </>
 );
 
