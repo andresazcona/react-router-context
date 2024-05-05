@@ -44,7 +44,7 @@ const Home = () => (
   <>
     <h2>WELCOME TO HOME</h2>
     <p>Este proyecto fue hecho con amor y cariño, y alimentado por mis lágrimas y mi insomnio </p>
-    <p>att. Andres Azcona</p>
+    <p>Att: Andres Azcona</p>
   </>
 );
 
