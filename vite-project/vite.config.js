@@ -1,9 +1,0 @@
-import { defineConfig } from 'vite';
-
-export default defineConfig({
-  build: {
-    rollupOptions: {
-      external: ['react-router-dom'], // Add other external libraries here if needed
-    },
-  },
-});

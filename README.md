@@ -4,6 +4,8 @@
 ### Universidad de La Sabana
 #### 2024 - I
 
+[Link del deploy](https://vite-project-ruddy.vercel.app/)
+
 ## Router Seguro con React.js
 
 ### Objetivo
