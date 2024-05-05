@@ -1,11 +1,12 @@
-// App.js
 import React, { useState } from 'react';
-import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import { AuthContext } from './context/AuthContext';
 import LoginPage from './pages/LoginPage';
 import HomePage from './pages/HomePage';
 import OverviewPage from './pages/OverviewPage';
 import ContactPage from './pages/ContactPage';
+import PrivateRoute from './PrivateRoute'; 
+import TestComponent from './TestComponent'; 
 
 const App = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -28,23 +29,14 @@ const App = () => {
       <AuthContext.Provider value={{ isLoggedIn, login, logout }}>
         <Routes>
           <Route path="/login" element={<LoginPage />} />
-          <PrivateRoute path="/home" element={<HomePage />} />
-          <PrivateRoute path="/overview" element={<OverviewPage />} />
-          <PrivateRoute path="/contact" element={<ContactPage />} />
+          <Route path="/home/*" element={<PrivateRoute element={<HomePage />} />} />
+          <Route path="/overview/*" element={<PrivateRoute element={<OverviewPage />} />} />
+          <Route path="/contact/*" element={<PrivateRoute element={<ContactPage />} />} />
+          <Route path="/test/*" element={<TestComponent />} /> {/* Route for TestComponent */}
           <Route path="*" element={<Navigate to="/login" />} />
         </Routes>
       </AuthContext.Provider>
     </Router>
-  );
-};
-
-const PrivateRoute = ({ element: Element, ...rest }) => {
-  const { isLoggedIn } = React.useContext(AuthContext);
-  return (
-    <Route
-      {...rest}
-      element={isLoggedIn ? <Element /> : <Navigate to="/login" />}
-    />
   );
 };
 
