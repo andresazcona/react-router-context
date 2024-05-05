@@ -43,7 +43,8 @@ const PrivateRoute = ({ element }) => {
 const Home = () => (
   <>
     <h2>WELCOME TO HOME</h2>
-    <p>Este proyecto fue hecho con amor y cariño, y alimentado por mis lágrimas y mi insomnio - por Andres Azcona</p>
+    <p>Este proyecto fue hecho con amor y cariño, y alimentado por mis lágrimas y mi insomnio </p>
+    <p>att. Andres Azcona</p>
   </>
 );
 
