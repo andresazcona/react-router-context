@@ -107,7 +107,6 @@ const App = () => {
   useEffect(() => {
     const handleStorageChange = (event) => {
       if (event.key === 'user' && !event.newValue) {
-        // User removed from storage, reload the page
         window.location.reload();
       } else if (event.key === 'user') {
         setUser(localStorage.getItem('user'));
