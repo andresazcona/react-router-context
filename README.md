@@ -1,8 +1,7 @@
-[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-24ddc0f5d75046c5622901739e7c5dd533143b0c8e959d652212380cedb1ea36.svg)](https://classroom.github.com/a/yGCr2kOI)
+
 # Desarrollo de Aplicaciones Web
 ## Andres Azcona
-### Universidad de La Sabana
-#### 2024 - I
+
 
 [Link del deploy](https://vite-project-ruddy.vercel.app/)
 
@@ -17,11 +16,6 @@ Crear un router seguro utilizando React.js, React Context y localStorage. Permit
 - Overview: Muestra el nombre "Overview" y presenta un menú de navegación (usted decide como implementar el logout)
 - Contact: Muestra el nombre "Contact" y presenta un menú de navegación (usted decide como implementar el logout)
 
-### Requisitos
-- El trabajo debe ser entregado en los grupos del proyecto final.
-- La entrega máxima es el 6 de mayo a las 6:55 am.
-- Se debe utilizar React Context; si se utiliza Redux u otra herramienta, habrá una penalización de **1 unidad**.
-- Lea bien la actividad y asegúrese de seguir las instrucciones presentadas en este documento.
 
 ### Páginas
 1. **Login (`/login`)**
@@ -40,16 +34,5 @@ Crear un router seguro utilizando React.js, React Context y localStorage. Permit
    - Mostrar un formulario de contacto.
    - Incluir un menú de navegación para acceder a las otras páginas.
 
-### Evaluación
-- Navegación del usuario autenticado: 1.5 puntos.
-- Protección de rutas: 1.5 puntos.
-- Uso correcto del contexto: 1 punto.
-- Uso de localStorage: 1 punto.
 
-### Importante
-- Si la tarea no está desplegada, no será calificada.
-- No se calificarán tareas tardías.
-- Si el repositorio no se marca, se obtendrá una calificación de 0.
-
-**¡Buena suerte!**
 
